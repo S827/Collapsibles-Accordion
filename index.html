@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Collapsibles-Accordion</title>
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body>
+    <h1>Learn how to create Collapsibles-Accordion</h1>
+    <p>Accordions are useful when you want to toggle between hiding and showing large amount of content:</p>
+    <ol>
+        <li>Add HTML</li>
+        <li>Add CSS</li>
+        <li>Add JS</li>
+    </ol>
+<hr>
+    <button class="accordion">Section 1</button>
+    <div class="panel">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus dicta, veniam doloribus odit illum fugiat id in tempore animi maiores officia, nostrum aut laudantium voluptatibus non maxime ullam itaque. Repudiandae.</p>
+    </div>
+
+    <button class="accordion">Section 2</button>
+    <div class="panel">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit totam, laudantium impedit a ipsam ad placeat non, alias similique consectetur assumenda tempore cum sunt illum corrupti ex cumque iusto. Mollitia!</p>
+    </div>
+
+    <button class="accordion">Section 3</button>
+    <div class="panel">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa neque quas nihil earum iste laborum nemo voluptatem alias, corrupti doloribus magni aperiam quos, corporis soluta modi dolorum! Architecto, repudiandae assumenda!</p>
+    </div>
+
+    <script>
+        var acc = document.getElementsByClassName("accordion");
+        var i;
+
+        for(i = 0; i < acc.length; i++){
+            acc[i].addEventListener("click", function(){
+                // toggle between adding and removing the "active" class
+                // to highlight the button that controls the panel.
+                this.classList.toggle("active");
+
+                // toggle between hiding and showing the active panel
+                var panel = this.nextElementSibling;
+                if(panel.style.display === "block"){
+                    panel.style.display = "none";
+                } else {
+                    panel.style.display = "block";
+                }
+            });
+        }
+    </script>
+</body>
+</html>
